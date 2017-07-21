@@ -22,10 +22,6 @@ Features:
 - Size: 16 bytes (128 bits)
 - Lock-free (i.e.: unlike UUIDv1 and v2)
 
-References:
-
-- https://github.com/rs/xid
-
 ## Install
 
     go get -u https://github.com/speps/go-hashids
