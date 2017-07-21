@@ -1,0 +1,6 @@
+hash: 0e2d4f367dea35660d9a3eb1247726af55a877832581559ff7bfcae359cb424d
+updated: 2017-07-21T12:10:55.789883064+08:00
+imports:
+- name: github.com/speps/go-hashids
+  version: d1d57a886aa7e3ef6092b70ceab077e35ee8e0ce
+testImports: []

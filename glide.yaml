@@ -1,0 +1,4 @@
+package: github.com/jefurry/goid
+import:
+- package: github.com/speps/go-hashids
+  version: ~1.0.0
