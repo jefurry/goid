@@ -4,7 +4,7 @@
 
 Package goid is a globally unique id generator library, ready to be used safely directly in your server code.
 
-Xid is using 128bit and hashids algorithm to generate globally unique ids to make it shorter when transported as a string:
+goid is using 128bit and hashids algorithm to generate globally unique ids to make it shorter when transported as a string:
 https://github.com/speps/go-hashids
 
 - 8-byte value representing the milliseconds since the Unix epoch,
