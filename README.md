@@ -22,16 +22,14 @@ Features:
 - Size: 16 bytes (128 bits)
 - Lock-free (i.e.: unlike UUIDv1 and v2)
 
-Best used with [xlog](https://github.com/rs/xlog)'s
-[RequestIDHandler](https://godoc.org/github.com/rs/xlog#RequestIDHandler).
-
 References:
 
 - https://github.com/rs/xid
 
 ## Install
 
-    go get github.com/jefurry/goid
+    go get -u https://github.com/speps/go-hashids
+    go get -u github.com/jefurry/goid
 
 ## Usage
 
