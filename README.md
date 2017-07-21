@@ -24,7 +24,7 @@ Features:
 
 ## Install
 
-    go get -u https://github.com/speps/go-hashids
+    go get -u github.com/speps/go-hashids
     go get -u github.com/jefurry/goid
 
 ## Usage
