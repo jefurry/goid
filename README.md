@@ -30,10 +30,18 @@ Features:
 ## Usage
 
 ```go
+import (
+    "github.com/jefurry/goid"
+)
+
 id := goid.New()
 
 s, _ := id.Encode(0, 0, 0, 0, 0)
 err := id.FromString(s)
+
+func init() {
+    goid.SeedMathRand()
+}
 ```
 
 Get `goid` embedded info:
