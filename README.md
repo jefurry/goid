@@ -1,6 +1,6 @@
 # Globally Unique ID Generator
 
-[![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/jefurry/goid) [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/jefurry/goid/master/LICENSE) [![Build Status](https://travis-ci.org/rs/xid.svg?branch=master)](https://travis-ci.org/jefurry/goid) [![Coverage](http://gocover.io/_badge/github.com/jefurry/goid)](http://gocover.io/github.com/jefurry/goid)
+[![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/jefurry/goid) [![license](http://img.shields.io/badge/license-BSD-red.svg?style=flat)](https://raw.githubusercontent.com/jefurry/goid/master/LICENSE) [![Build Status](https://travis-ci.org/jefurry/goid.svg?branch=master)](https://travis-ci.org/jefurry/goid) [![Coverage](http://gocover.io/_badge/github.com/jefurry/goid)](http://gocover.io/github.com/jefurry/goid)
 
 Package goid is a globally unique id generator library, ready to be used safely directly in your server code.
 
