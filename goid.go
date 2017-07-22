@@ -79,11 +79,12 @@ func (id *ID) Encode(serverRoomID, clusterID, machineID, workID, opID uint32) (s
 	nums64 := make([]int64, 0, RAW_LEN)
 
 	// big endian
-	timestamp := uint64(time.Now().UnixNano())
+	timestamp := time.Now().UnixNano()
+	c := atomic.AddUint32(&objectIDCounter, 1)
 
 	nums64 = append(nums64, int64(timestamp>>32))
 	nums64 = append(nums64, int64(timestamp&0xffffffff))
-	nums64 = append(nums64, int64(atomic.AddUint32(&objectIDCounter, 1)))
+	nums64 = append(nums64, int64(c))
 
 	last := ((serverRoomID & 0x3f) << 26) |
 		((clusterID & 0xff) << 18) |
@@ -98,6 +99,14 @@ func (id *ID) Encode(serverRoomID, clusterID, machineID, workID, opID uint32) (s
 	if err != nil {
 		return "", err
 	}
+
+	id.timestamp = timestamp
+	id.counter = c
+	id.serverRoomID = serverRoomID
+	id.clusterID = clusterID
+	id.machineID = machineID
+	id.workID = workID
+	id.opID = opID
 
 	return s, nil
 }
@@ -163,8 +172,4 @@ func (id *ID) getHD() *hashids.HashID {
 	hd.Alphabet = id.alphabet
 
 	return hashids.NewWithData(hd)
-}
-
-func init() {
-	SeedMathRand()
 }
